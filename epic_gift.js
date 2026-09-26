@@ -1,1 +1,1 @@
-document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>b.animate([{transform:'scale(1)'},{transform:'scale(.965)'},{transform:'scale(1)'}],{duration:150,easing:'ease-out'})));
+document.querySelectorAll('.game-card').forEach(card=>{card.addEventListener('click',()=>{card.animate([{transform:'scale(1)'},{transform:'scale(.975)'},{transform:'scale(1)'}],{duration:220});if(card.dataset.game==='rocket'){const r=card.querySelector('.rocket');r.animate([{top:'44px'},{top:'-8px'},{top:'44px'}],{duration:900,easing:'cubic-bezier(.2,.8,.2,1)'});}})});
