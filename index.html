@@ -1,59 +1,33 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b0d14">
-<title>Epic Gift</title>
-<link rel="stylesheet" href="epic_gift.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Epic Gift</title><link rel="stylesheet" href="epic_gift.css">
 </head>
 <body>
 <div class="app">
-  <header class="tgbar">
-    <div class="tg-title">Epic Gift</div><button class="xbtn">×</button>
-  </header>
+  <header class="topbar"><div class="avatar">EG</div><div class="brand"><span class="brand-icon">✦</span><div><b>Epic Gift</b><small>Mini App</small></div></div><button class="dots">•••</button></header>
   <main>
-    <section class="walletbar">
-      <div class="online"><i></i> زنده</div>
-      <div class="balance"><span class="tondot">◆</span><b>0</b> TON</div>
-      <button class="plus">+</button><div class="profile">EG</div>
-    </section>
+    <section class="balance"><div><span>Your balance</span><strong>12.057 <i>TON</i></strong></div><button class="deposit">Deposit</button></section>
+    <section class="live-head"><h2>Live</h2><button>See all</button></section>
+    <div class="live-row"><div class="live-gift purple">🎁</div><div class="live-gift blue">🎁</div><div class="live-gift pink">🎁</div><div class="live-gift gold">🎁</div><div class="live-gift green">🎁</div><div class="live-gift red">🎁</div></div>
 
-    <section class="live">
-      <div class="live-label"><i></i> هدیه‌های زنده</div>
-      <div class="live-strip">
-        <div class="mini-gift purple"><span class="gem"></span></div>
-        <div class="mini-gift blue"><span class="star"></span></div>
-        <div class="mini-gift gold"><span class="crown"></span></div>
-        <div class="mini-gift violet"><span class="diamond"></span></div>
-        <div class="mini-gift pink"><span class="flower"></span></div>
-        <div class="mini-gift cyan"><span class="orb"></span></div>
-      </div>
-    </section>
+    <section class="hero rocket" id="rocket"><div class="hero-copy"><span class="eyebrow">GAME MODE</span><h1>ROCKET</h1><p>Catch the multiplier before the rocket flies away.</p><button class="play" id="rocketBtn">Play Rocket</button></div><div class="rocket-art"><div class="stars">✦　·　✧<br>　·　✦</div><div class="flame"></div><div class="rocket-body"><div class="window"></div><div class="fin left"></div><div class="fin right"></div></div><div class="trail"></div></div></section>
 
-    <section class="hero-grid">
-      <button class="hero contracts"><span class="hero-art giftbox"><i></i></span><strong>مبادلات برای<br>هدایای شما</strong><small>ارزش هدایای خود را بالا ببرید</small><em>›</em></button>
-      <button class="hero upgrade"><span class="hero-art upgradebox"><i></i></span><strong>ارتقای هدیه</strong><small>هدیه رویایی انتخاب کنید</small><em>›</em></button>
-    </section>
+    <section class="hero pvp"><div class="pvp-copy"><span class="eyebrow">BATTLE</span><h1>PVP</h1><p>Challenge another player.</p><button class="play light">Play PVP</button></div><div class="players"><div class="player p1">⚡</div><div class="vs">VS</div><div class="player p2">👑</div></div></section>
 
-    <section class="section-head"><h1>بازی‌ها</h1><button>همه را ببینید ‹</button></section>
-    <section class="games">
-      <button class="game mines" data-game="mines"><div class="art"><div class="mine"></div><span class="spark a"></span><span class="spark b"></span><span class="spark c"></span></div><strong>Mines</strong><small>دور از مین‌ها حرکت کن</small></button>
-      <button class="game rocket" data-game="rocket"><div class="art"><div class="rocket-body"><i class="window"></i><i class="fin left"></i><i class="fin right"></i></div><div class="rocket-flame"></div></div><strong>Rocket</strong><small>Rocket Mode</small></button>
-      <button class="game pvp" data-game="pvp"><div class="art"><span class="blade one"></span><span class="blade two"></span><b>VS</b></div><strong>PvP</strong><small>Fight for the bank</small></button>
-      <button class="game boxes" data-game="boxes"><div class="art"><div class="case"><i></i></div><span class="shine"></span></div><strong>Boxes</strong><small>Open a surprise</small></button>
-      <button class="game farm" data-game="farm"><div class="art"><div class="farmbox"><i></i></div><span class="coins">◆</span></div><strong>Farm Box</strong><small>Any Telegram Gift</small></button>
-      <button class="game free" data-game="free"><div class="art"><div class="freebox"><i>24</i></div><span class="free-star">✦</span></div><strong>FREE24</strong><small>Free box every day</small></button>
-    </section>
+    <section class="hero hub"><div class="hero-copy"><span class="eyebrow">MORE GAMES</span><h1>PLAY HUB</h1><p>Upgrade · Plinko · Mines</p><button class="play">Open Hub</button></div><div class="orb-grid"><span>◆</span><span>♢</span><span>✦</span><span>●</span></div></section>
+
+    <div class="twocards"><article class="mini free24"><span>FREE24</span><b>Daily reward</b><button>Claim</button></article><article class="mini free"><span>FREE</span><b>Free gifts</b><button>Open</button></article></div>
+
+    <section class="gifts"><div class="section-title"><h2>Gifts</h2><button>See all</button></div><div class="gift-grid">
+      <article class="gift-card"><div class="gift-art farm"><div class="box"></div></div><b>Farm</b><small>0.80 TON</small></article>
+      <article class="gift-card"><div class="gift-art autumn"><div class="box"></div></div><b>Autumn</b><small>1.20 TON</small></article>
+      <article class="gift-card"><div class="gift-art movie"><div class="box"></div></div><b>Movie</b><small>2.40 TON</small></article>
+      <article class="gift-card"><div class="gift-art space"><div class="box"></div></div><b>Space</b><small>3.10 TON</small></article>
+    </div></section>
   </main>
-  <nav class="bottom">
-    <button><span>▢</span><small>کوله پشتی</small></button>
-    <button><span>♧</span><small>دعوت کردن</small></button>
-    <button class="active"><span>⌂</span><small>خانه</small></button>
-    <button><span>▥</span><small>جدول امتیازات</small></button>
-    <button class="income"><b>8</b><span>◉</span><small>کسب درآمد</small></button>
-  </nav>
+  <nav class="nav"><button>🎒<span>Backpack</span></button><button>👥<span>Invite</span></button><button class="active">⌂<span>Home</span></button><button>🏆<span>Leaderboard</span></button><button>⇄<span>P2P</span></button></nav>
 </div>
 <script src="epic_gift.js"></script>
-</body>
-</html>
+</body></html>
