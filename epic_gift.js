@@ -1,1 +1,1 @@
-(()=>{document.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>b.animate([{transform:"scale(1)"},{transform:"scale(.965)"},{transform:"scale(1)"}],{duration:150,easing:"ease-out"})));})();
+document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>b.animate([{transform:'scale(1)'},{transform:'scale(.965)'},{transform:'scale(1)'}],{duration:150,easing:'ease-out'})));
