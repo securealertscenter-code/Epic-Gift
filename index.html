@@ -1,1 +1,55 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#0d0e13"><title>هدیه حماسی</title><link rel="stylesheet" href="epic_gift.css"></head><body><main class="app"><header class="topbar"><button class="icon-btn">‹</button><div class="brand"><span>✦</span><b>هدیه حماسی</b></div><div class="top-actions"><button class="icon-btn">⌄</button><button class="icon-btn">⋮</button></div></header><section class="account"><div class="profile-gem"><span></span></div><div class="balance"><small>موجودی شما</small><div><i>◇</i><strong>0.006</strong></div></div><button class="deposit">واریز ▣</button></section><section class="live"><div class="live-label"><i></i><b>زنده</b></div><div class="live-row"><div class="gift purple"><span class="diamond"></span></div><div class="gift gold"><span class="crown"></span></div><div class="gift blue"><span class="spark"></span></div><div class="gift violet"><span class="diamond"></span></div></div></section><section class="hero"><button class="card contracts"><span class="premium-diamond"></span><b>معاملات برای هدایای</b><small>TON</small><em>‹</em></button><button class="card upgrade"><span class="premium-star"></span><b>ارتقا هدیه</b><small>هدیه رویایی انتخاب کنید</small><em>‹</em></button></section><section class="heading"><b>بازی‌ها</b><span>همه را ببینید ‹</span></section><section class="games"><button class="game rocket"><span class="rocket-wrap"><span class="rocket-body"></span><span class="window"></span><span class="flame"></span></span><b>راکت</b><small>تا ستاره‌ها برو</small></button><button class="game mines"><span class="mine"></span><b>ماین</b><small>از مین‌ها دوری کن</small></button><button class="game plinko"><span class="plinko-art"></span><b>پلینکو</b><small>تا 1000 برابر</small></button><button class="game crafts"><span class="craft"></span><b>کرافت</b><small>هدایا را ترکیب کن</small></button><button class="game pvp"><span class="vs">VS</span><b>PvP</b><small>برای بانک بجنگ</small></button><button class="game boxes"><span class="box"></span><b>باکس‌ها</b><small>هدایای پریمیوم</small></button></section><nav class="nav"><button><span class="backpack"></span><small>کوله پشتی</small></button><button><span class="invite">♧</span><small>دعوت کردن</small></button><button class="active"><span class="home"></span><small>خانه</small></button><button><span class="leader"></span><small>جدول امتیازات</small></button><button class="earn"><i>8</i><span class="coin"></span><small>کسب درآمد</small></button></nav></main><script src="epic_gift.js"></script></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Epic Gift</title><link rel="stylesheet" href="epic_gift.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="live"><span class="dot"></span><span>زنده</span></div>
+    <div class="balance"><span class="coin">◆</span><b>0</b><span>TON</span></div>
+    <button class="plus" aria-label="افزودن">+</button>
+    <div class="avatar">EG</div>
+  </header>
+
+  <section class="gift-strip" aria-label="هدایای زنده">
+    <div class="gift-mini purple"><span class="diamond"></span></div>
+    <div class="gift-mini gold"><span class="crown"></span></div>
+    <div class="gift-mini blue"><span class="star"></span></div>
+    <div class="gift-mini violet"><span class="diamond"></span></div>
+  </section>
+
+  <main>
+    <section class="hero-grid">
+      <article class="hero-card green">
+        <div class="shine"></div><div class="hero-art giftbox green-art"><span class="box-lid"></span><span class="box-body"></span><span class="ribbon"></span></div>
+        <div class="hero-copy"><h2>ارتقای هدیه</h2><p>هدیه رویایی انتخاب کنید</p></div><span class="arrow">‹</span>
+      </article>
+      <article class="hero-card purple-card">
+        <div class="shine"></div><div class="hero-art giftbox purple-art"><span class="box-lid"></span><span class="box-body"></span><span class="ribbon"></span></div>
+        <div class="hero-copy"><h2>مبادلات برای هدایای</h2><p>TON</p></div><span class="arrow">‹</span>
+      </article>
+    </section>
+
+    <div class="section-head"><h1>بازی‌ها</h1><a>همه را ببینید ›</a></div>
+    <section class="games">
+      <button class="game-card rocket-card" data-game="rocket"><div class="game-bg"></div><div class="rocket"><div class="rocket-window"></div><div class="rocket-fin left"></div><div class="rocket-fin right"></div><div class="flame"><i></i></div></div><h3>راکت</h3><p>تا ستاره‌ها برو</p></button>
+      <button class="game-card mines-card" data-game="mines"><div class="game-bg"></div><div class="mine-art"><span></span><span></span><span></span><span></span><b></b></div><h3>ماین</h3><p>از مین‌ها دوری کن</p></button>
+      <button class="game-card orange-card"><div class="game-bg"></div><div class="crate-art"><div class="crate-top"></div><div class="crate-front"></div><div class="crate-side"></div></div><h3>قراردادها</h3><p>هدایای خود را معامله کن</p></button>
+      <button class="game-card violet-card"><div class="game-bg"></div><div class="plinko"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>پلی‌نکو</h3><p>شانس خود را امتحان کن</p></button>
+      <button class="game-card blue-card"><div class="game-bg"></div><div class="pvp-art"><span></span><b>VS</b><i></i></div><h3>PvP</h3><p>رقابت با بازیکنان</p></button>
+      <button class="game-card gold-card"><div class="game-bg"></div><div class="box-art"><div></div></div><h3>باکس‌ها</h3><p>جوایز ویژه</p></button>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a><span class="nav-ico ring"></span><em>کسب درآمد</em><b class="badge">8</b></a>
+    <a><span class="nav-ico bars"></span><em>جدول امتیازات</em></a>
+    <a class="active"><span class="nav-ico home"></span><em>خانه</em></a>
+    <a><span class="nav-ico club"></span><em>دعوت کردن</em></a>
+    <a><span class="nav-ico square"></span><em>کوله پشتی</em></a>
+  </nav>
+</div>
+<script src="epic_gift.js"></script>
+</body></html>
