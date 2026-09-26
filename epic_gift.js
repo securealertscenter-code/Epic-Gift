@@ -1,0 +1,1 @@
+const track=document.getElementById("liveTrack");const icons=["🎁","💎","🎒","🪙","🚀","💰","🎁","💎","🎒","🪙","🎁","🚀","💰","💎","🎒","🎁"];[...icons,...icons].forEach(i=>{const e=document.createElement("div");e.className="live-card";e.textContent=i;track.appendChild(e)});
