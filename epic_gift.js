@@ -1,1 +1,25 @@
-const track=document.getElementById("liveTrack");const icons=["🎁","💎","🎒","🪙","🚀","💰","🎁","💎","🎒","🪙","🎁","🚀","💰","💎","🎒","🎁"];[...icons,...icons].forEach(i=>{const e=document.createElement("div");e.className="live-card";e.textContent=i;track.appendChild(e)});
+document.addEventListener("DOMContentLoaded", () => {
+
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      button.animate(
+        [
+          { transform: "scale(1)" },
+          { transform: "scale(.96)" },
+          { transform: "scale(1)" }
+        ],
+        {
+          duration:180,
+          easing:"ease-out"
+        }
+      );
+
+    });
+
+  });
+
+});
