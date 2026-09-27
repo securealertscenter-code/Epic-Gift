@@ -1,109 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-  <meta name="theme-color" content="#171719">
-  <title>Epic Gift <span class="v3-badge">V3</span></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="epic_gift.css">
-<style>.v3-badge{display:inline-flex;margin-left:6px;padding:3px 7px;border-radius:8px;background:linear-gradient(135deg,#9a6bff,#6033cf);color:#fff;font:800 9px Arial;letter-spacing:.5px;vertical-align:middle}</style></head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Epic Gift</title>
+<link rel="stylesheet" href="epic_gift.css">
+</head>
 <body>
-  <div id="app">
-    <header class="tg-head">
-      <button class="tg-icon" id="closeBtn" aria-label="Close">×</button>
-      <strong>Epic Gift</strong>
-      <div class="tg-right">
-        <button class="tg-chevron" aria-label="Expand">⌄</button>
-        <button class="tg-icon dots" id="menuBtn" aria-label="Menu">•••</button>
+<header class="top">
+  <button class="pill">✕ <span>Close</span></button>
+  <div class="brand"><span class="gift">🎁</span> Epic Gift</div>
+  <button class="pill menu">⌄ <span>⋮</span></button>
+</header>
+
+<main>
+  <section class="wallet">
+    <div class="profile">
+      <div class="avatar">🕶️</div>
+      <div>
+        <div class="muted">Your balance</div>
+        <div class="balance"><span class="ton">◇</span> <b>12.057</b></div>
       </div>
-    </header>
+    </div>
+    <button class="deposit">▣ &nbsp; Deposit</button>
+  </section>
 
-    <main id="screen" class="screen">
-      <section class="balance-card">
-        <div class="balance-copy">
-          <span>Your balance</span>
-          <div class="balance-value"><b id="balance">0.000</b><span class="ton">◉</span></div>
-        </div>
-        <button class="wallet-btn" id="walletBtn"><span>▱</span><b>＋</b></button>
-        <div class="avatar" id="avatar"><span></span></div>
-      </section>
+  <section class="live">
+    <div class="live-title"><i></i><b>Live</b></div>
+    <div class="live-row">
+      <div class="live-item yellow">🧢</div>
+      <div class="live-item aqua">◇</div>
+      <div class="live-item yellow">🐈‍⬛</div>
+      <div class="live-item blue">🐸</div>
+      <div class="live-item aqua">◇</div>
+      <div class="live-item blue">◇</div>
+    </div>
+  </section>
 
-      <section class="live-section">
-        <div class="live-label"><i></i><b>LIVE</b></div>
-        <div class="live-strip" id="liveStrip">
-          <div class="live-gift heart">♥</div>
-          <div class="live-gift peach">●</div>
-          <div class="live-gift sword">╱</div>
-          <div class="live-gift star">✦</div>
-          <div class="live-gift flower">✿</div>
-          <div class="live-gift gem">⬟</div>
-        </div>
-      </section>
+  <section class="hero-list">
+    <article class="hero rocket">
+      <div class="tag">⚡ HOT!</div>
+      <div class="hero-title">🚀 ROCKET</div>
+      <div class="rocket-art">🚀</div>
+      <div class="mult m1">x5.66</div><div class="mult m2">x2.05</div><div class="mult m3">x3.28</div>
+    </article>
+    <article class="hero pvp">
+      <div class="tag">♨ NEW!</div>
+      <div class="hero-title">⚔ PVP</div>
+      <div class="players">
+        <span>CRYPTO<br><b>3.7%</b></span><span>DEGEN<br><b>7.1%</b></span><span>MIKE_K<br><b>5.2%</b></span><span>TONN<br><b>4.4%</b></span>
+      </div>
+    </article>
+    <article class="hero hub">
+      <div class="tag">♨ HOT</div>
+      <div class="hero-title">🎮 PLAY HUB</div>
+      <div class="games"><b>Upgrade</b><b>Plinko</b><b>Mines</b></div>
+    </article>
+  </section>
 
-      <section class="mode-grid">
-        <button class="mode-card contracts" data-page="contracts">
-          <span class="mode-icon">⇄</span>
-          <div><small>PLAY MODE</small><b>Contracts</b></div><em>›</em>
-        </button>
-        <button class="mode-card upgrade" data-page="upgrade">
-          <span class="mode-icon">↗</span>
-          <div><small>PLAY MODE</small><b>Upgrade</b></div><em>›</em>
-        </button>
-        <button class="mode-card rocket" data-page="rocket">
-          <span class="mode-icon">⌁</span>
-          <div><small>PLAY MODE</small><b>Rocket</b></div><em>›</em>
-        </button>
-        <button class="mode-card pvp" data-page="pvp">
-          <span class="mode-icon">⚔</span>
-          <div><small>BATTLE MODE</small><b>PvP</b></div><em>›</em>
-        </button>
-      </section>
+  <section class="free-grid">
+    <article class="free free24"><div>FREE<span>24</span></div><strong>💍</strong></article>
+    <article class="free free0"><div>FREE</div><strong>🍭</strong></article>
+  </section>
 
-      <section class="boxes">
-        <div class="section-title"><h2>Gift Boxes</h2><button id="allBoxes">View all</button></div>
-        <div class="box-grid">
-          <button class="box-card free24" data-page="free24">
-            <div class="box-art"><span>24</span><b>FREE</b></div>
-            <strong>FREE24</strong><small>Every 24 hours</small>
-          </button>
-          <button class="box-card farm" data-page="farm">
-            <div class="box-art"><span>🎁</span></div>
-            <strong>FARM BOX</strong><small>Any gift can drop</small>
-          </button>
-          <button class="box-card" data-page="shop">
-            <div class="box-art gift-pink">♥</div>
-            <strong>Heart Locket</strong><small>Rare collection</small>
-          </button>
-          <button class="box-card" data-page="shop">
-            <div class="box-art gift-blue">◆</div>
-            <strong>Ion Gem</strong><small>Premium gift</small>
-          </button>
-        </div>
-      </section>
+  <section class="gift-boxes">
+    <h2>Gift Boxes <span>View all</span></h2>
+    <div class="gift-grid">
+      <article class="gift-card green"><div class="art">🐸💎</div><footer><b>Farm</b><button>0.1 ◇</button></footer></article>
+      <article class="gift-card"><div class="art">🧢💎</div><footer><b>Autumn</b><button>3.5 ◇</button></footer></article>
+      <article class="gift-card"><div class="art">🎬🍿</div><footer><b>Movie</b><button>4 ◇</button></footer></article>
+      <article class="gift-card"><div class="art">🪐🚀</div><footer><b>Space</b><button>6 ◇</button></footer></article>
+    </div>
+  </section>
+</main>
 
-      <section class="discover">
-        <button class="discover-card" data-page="hub">
-          <span class="play-box">▶</span>
-          <div><small>DISCOVER</small><b>Play Hub</b></div>
-          <em>›</em>
-        </button>
-      </section>
-    </main>
-
-    <nav class="bottom-nav">
-      <button data-nav="backpack"><span>▣</span><small>Backpack</small></button>
-      <button data-nav="invite"><span>♧</span><small>Invite</small></button>
-      <button data-nav="home" class="active"><span>⌂</span><small>Home</small></button>
-      <button data-nav="leaderboard"><span>▥</span><small>Leaderboard</small></button>
-      <button data-nav="earn"><span>◉</span><small>Earn</small></button>
-    </nav>
-
-    <div id="overlay" class="overlay hidden"></div>
-    <div id="sheet" class="sheet hidden"></div>
-  </div>
-  <script src="epic_gift.js"></script>
+<nav class="bottom">
+  <a>▣<span>Backpack</span></a>
+  <a>♧<span>Invite</span></a>
+  <a class="active">⌂<span>Home</span></a>
+  <a>♜<span>Leaderboard</span></a>
+  <a>⇄<span>P2P</span></a>
+</nav>
+<script src="epic_gift.js"></script>
 </body>
 </html>
