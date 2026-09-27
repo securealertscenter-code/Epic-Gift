@@ -2,85 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#15161b">
 <title>Epic Gift</title>
 <link rel="stylesheet" href="epic_gift.css">
 </head>
 <body>
-<header class="top">
-  <button class="pill">✕ <span>Close</span></button>
-  <div class="brand"><span class="gift">🎁</span> Epic Gift</div>
-  <button class="pill menu">⌄ <span>⋮</span></button>
-</header>
+<div id="app">
+  <header class="appbar">
+    <button class="close-btn" id="closeBtn">× <span>Close</span></button>
+    <div class="brand"><span class="brand-gift">🎁</span><span>Epic Gift</span></div>
+    <div class="app-actions"><button>⌄</button><button id="menuBtn">⋮</button></div>
+  </header>
 
-<main>
-  <section class="wallet">
-    <div class="profile">
-      <div class="avatar">🕶️</div>
-      <div>
-        <div class="muted">Your balance</div>
-        <div class="balance"><span class="ton">◇</span> <b>12.057</b></div>
+  <main>
+    <section class="balance">
+      <div class="avatar"><span></span></div>
+      <div class="balance-info">
+        <div class="label">Your balance</div>
+        <div class="amount"><span class="ton">◇</span><b>12.057</b></div>
       </div>
-    </div>
-    <button class="deposit">▣ &nbsp; Deposit</button>
-  </section>
+      <button class="deposit" id="deposit">▣&nbsp; Deposit</button>
+    </section>
 
-  <section class="live">
-    <div class="live-title"><i></i><b>Live</b></div>
-    <div class="live-row">
-      <div class="live-item yellow">🧢</div>
-      <div class="live-item aqua">◇</div>
-      <div class="live-item yellow">🐈‍⬛</div>
-      <div class="live-item blue">🐸</div>
-      <div class="live-item aqua">◇</div>
-      <div class="live-item blue">◇</div>
-    </div>
-  </section>
-
-  <section class="hero-list">
-    <article class="hero rocket">
-      <div class="tag">⚡ HOT!</div>
-      <div class="hero-title">🚀 ROCKET</div>
-      <div class="rocket-art">🚀</div>
-      <div class="mult m1">x5.66</div><div class="mult m2">x2.05</div><div class="mult m3">x3.28</div>
-    </article>
-    <article class="hero pvp">
-      <div class="tag">♨ NEW!</div>
-      <div class="hero-title">⚔ PVP</div>
-      <div class="players">
-        <span>CRYPTO<br><b>3.7%</b></span><span>DEGEN<br><b>7.1%</b></span><span>MIKE_K<br><b>5.2%</b></span><span>TONN<br><b>4.4%</b></span>
+    <section class="live">
+      <div class="section-head"><span class="live-dot"></span><b>Live</b></div>
+      <div class="live-row">
+        <div class="live-item hat"><span>⌁</span></div>
+        <div class="live-item cyan"><span>◇</span></div>
+        <div class="live-item cat"><span>♣</span></div>
+        <div class="live-item frog"><span>●</span></div>
+        <div class="live-item pink"><span>◇</span></div>
+        <div class="live-item blue"><span>✦</span></div>
       </div>
-    </article>
-    <article class="hero hub">
-      <div class="tag">♨ HOT</div>
-      <div class="hero-title">🎮 PLAY HUB</div>
-      <div class="games"><b>Upgrade</b><b>Plinko</b><b>Mines</b></div>
-    </article>
-  </section>
+    </section>
 
-  <section class="free-grid">
-    <article class="free free24"><div>FREE<span>24</span></div><strong>💍</strong></article>
-    <article class="free free0"><div>FREE</div><strong>🍭</strong></article>
-  </section>
+    <section class="feature-list">
+      <article class="feature rocket-card">
+        <div class="feature-copy"><small>PLAY MODE</small><h2>Rocket</h2></div>
+        <div class="rocket-shape">🚀</div>
+        <span class="x x1">x5.66</span><span class="x x2">x2.05</span><span class="x x3">x3.28</span>
+      </article>
+      <article class="feature pvp-card">
+        <div class="feature-copy"><small>BATTLE MODE</small><h2>PvP</h2></div>
+        <div class="pvp-players"><i>CRYPTO<br><b>3.7%</b></i><i>DEGEN<br><b>7.1%</b></i><i>MIKE_K<br><b>5.2%</b></i><i>TONN<br><b>4.4%</b></i></div>
+      </article>
+      <article class="feature hub-card">
+        <div class="feature-copy"><small>DISCOVER</small><h2>Play Hub</h2></div>
+        <div class="hub-pills"><i>Upgrade</i><i>Plinko</i><i>Mines</i></div>
+      </article>
+    </section>
 
-  <section class="gift-boxes">
-    <h2>Gift Boxes <span>View all</span></h2>
-    <div class="gift-grid">
-      <article class="gift-card green"><div class="art">🐸💎</div><footer><b>Farm</b><button>0.1 ◇</button></footer></article>
-      <article class="gift-card"><div class="art">🧢💎</div><footer><b>Autumn</b><button>3.5 ◇</button></footer></article>
-      <article class="gift-card"><div class="art">🎬🍿</div><footer><b>Movie</b><button>4 ◇</button></footer></article>
-      <article class="gift-card"><div class="art">🪐🚀</div><footer><b>Space</b><button>6 ◇</button></footer></article>
-    </div>
-  </section>
-</main>
+    <section class="free-row">
+      <article class="free-card free24"><div class="free-label">FREE<span>24</span></div><div class="free-art">💎</div><b>Every 24 hours</b></article>
+      <article class="free-card free0"><div class="free-label">FREE</div><div class="free-art">🎁</div><b>Free gift</b></article>
+    </section>
 
-<nav class="bottom">
-  <a>▣<span>Backpack</span></a>
-  <a>♧<span>Invite</span></a>
-  <a class="active">⌂<span>Home</span></a>
-  <a>♜<span>Leaderboard</span></a>
-  <a>⇄<span>P2P</span></a>
-</nav>
+    <section class="boxes">
+      <div class="title-row"><h2>Gift Boxes</h2><button>View all</button></div>
+      <div class="box-grid">
+        <article class="box-card farm"><div class="box-art"><div class="box-icon">🐸</div><span>FARM</span></div><div class="box-meta"><b>Farm</b><button>0.1 ◇</button></div></article>
+        <article class="box-card autumn"><div class="box-art"><div class="box-icon">🧢</div><span>AUTUMN</span></div><div class="box-meta"><b>Autumn</b><button>3.5 ◇</button></div></article>
+        <article class="box-card movie"><div class="box-art"><div class="box-icon">🎬</div><span>MOVIE</span></div><div class="box-meta"><b>Movie</b><button>4 ◇</button></div></article>
+        <article class="box-card space"><div class="box-art"><div class="box-icon">🪐</div><span>SPACE</span></div><div class="box-meta"><b>Space</b><button>6 ◇</button></div></article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button><span>▣</span><small>Backpack</small></button>
+    <button><span>♧</span><small>Invite</small></button>
+    <button class="active"><span>⌂</span><small>Home</small></button>
+    <button><span>♜</span><small>Leaderboard</small></button>
+    <button><span>⇄</span><small>P2P</small></button>
+  </nav>
+</div>
 <script src="epic_gift.js"></script>
 </body>
 </html>
