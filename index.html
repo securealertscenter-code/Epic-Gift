@@ -3,72 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="theme-color" content="#111216">
-<title>Epic Gift V11</title>
-<link rel="stylesheet" href="epic_gift.css">
+<meta name="theme-color" content="#0b0d14">
+<title>Epic Gift — V13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="epic_gift.css">
 </head>
 <body>
 <div id="app">
-  <header class="topbar">
-    <button class="close-pill" id="closeBtn" aria-label="Close"><span>×</span><b>بستن</b></button>
-    <div class="brand"><span class="brand-icon"><svg viewBox="0 0 64 64"><defs><linearGradient id="giftG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a34cff"/><stop offset="1" stop-color="#6b37d9"/></linearGradient></defs><path d="M10 25h44v29H10z" fill="url(#giftG)"/><path d="M7 20h50v11H7z" fill="#b65cff"/><path d="M32 20v34" stroke="#fff" stroke-width="5"/><path d="M31 20c-12 0-18-3-18-9 0-5 4-8 9-8 8 0 10 8 10 17Zm2 0c12 0 18-3 18-9 0-5-4-8-9-8-8 0-10 8-10 17Z" fill="#d88cff"/></svg></span><strong>Epic Gift</strong></div>
-    <div class="top-actions"><button class="round-btn" id="dropBtn">⌄</button><button class="round-btn dots" id="menuBtn">⋮</button></div>
-  </header>
+<header class="topbar">
+  <button class="close-pill" id="closeBtn">× <b>بستن</b></button>
+  <div class="brand"><span class="brand-gift">✦</span><strong>Epic Gift</strong></div>
+  <div class="top-actions"><button id="dropBtn" class="round-btn">⌄</button><button id="menuBtn" class="round-btn">⋮</button></div>
+</header>
 
-  <main id="page">
-    <section class="balance-row">
-      <div class="avatar"><div class="avatar-face"></div><div class="avatar-body"></div><span class="diamond-mini">◇</span></div>
-      <div class="balance-info"><div class="muted">Your balance</div><div class="amount"><span class="ton-logo"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" fill="#23a8e8"/><path d="M18 18h28L32 48 18 18Z" fill="none" stroke="#fff" stroke-width="4"/><path d="M18 18l14 30V18M46 18 32 48" fill="none" stroke="#fff" stroke-width="4"/></svg></span><strong>0.001</strong></div></div>
-      <button class="deposit" id="deposit"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 7V5h10v2M16 12h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="12" r="1.5" fill="currentColor"/></svg>Deposit</button>
-    </section>
+<main id="page">
+<section class="balance-row glass">
+  <div class="avatar"><span>👤</span><i>◆</i></div>
+  <div class="balance-info"><small>Your balance</small><div class="amount"><span class="ton">◆</span><strong id="balance">12.057</strong></div></div>
+  <button class="deposit" id="deposit">▣ <span>Deposit</span></button>
+</section>
 
-    <section class="live-section">
-      <div class="live-title"><span></span><b>Live</b></div>
-      <div class="live-track">
-        <button class="live-card cap" aria-label="Live gift"><svg viewBox="0 0 70 70"><path d="M15 31c8-13 24-18 39-12 6 2 8 7 6 12-2 4-6 5-10 5l-2 13-10 7-8-5 3-13-11-1c-7-1-10-4-7-6Z" fill="#f7d14a"/><path d="M22 30c7-7 18-10 29-7" fill="none" stroke="#fff09a" stroke-width="4" stroke-linecap="round"/><path d="M47 35l8 8" stroke="#f1c63d" stroke-width="4" stroke-linecap="round"/></svg></button>
-        <button class="live-card ton"><svg viewBox="0 0 70 70"><rect x="17" y="17" width="36" height="36" rx="6" transform="rotate(45 35 35)" fill="#58b6ef"/><path d="M25 30l10-10 10 10-10 22Z" fill="#6fc2f2"/><path d="M25 30h20M35 30v22" stroke="#c8edff" stroke-width="3" stroke-linecap="round"/></svg></button>
-        <button class="live-card cat"><svg viewBox="0 0 70 70"><path d="M18 28 20 15l10 7c4-2 7-2 11 0l10-7 2 13c5 7 1 22-14 24-15-2-20-17-14-24Z" fill="#17191f"/><circle cx="28" cy="33" r="3" fill="#b9f25b"/><circle cx="42" cy="33" r="3" fill="#b9f25b"/><path d="M31 42c3 2 5 2 8 0" fill="none" stroke="#777b84" stroke-width="2"/></svg></button>
-        <button class="live-card frog"><svg viewBox="0 0 70 70"><path d="M19 45c-3-10 2-21 12-25 8-4 17-1 21 6 5 9 1 21-9 25-10 4-21 3-24-6Z" fill="#4dbd55"/><circle cx="29" cy="31" r="5" fill="#d9ff9d"/><circle cx="42" cy="29" r="5" fill="#d9ff9d"/><circle cx="29" cy="31" r="2"/><circle cx="42" cy="29" r="2"/><path d="M25 45c8 5 16 5 24 0" fill="none" stroke="#246f36" stroke-width="3"/></svg></button>
-        <button class="live-card ton"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="#22a8e7"/><path d="M22 22h26L35 48 22 22Z" fill="none" stroke="#fff" stroke-width="3"/><path d="M22 22l13 26V22M48 22 35 48" fill="none" stroke="#fff" stroke-width="3"/></svg></button>
-        <button class="live-card ton"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="#22a8e7"/><path d="M22 22h26L35 48 22 22Z" fill="none" stroke="#fff" stroke-width="3"/><path d="M22 22l13 26V22M48 22 35 48" fill="none" stroke="#fff" stroke-width="3"/></svg></button>
-      </div>
-    </section>
+<section class="live-section">
+  <div class="live-title"><i></i><b>Live</b></div>
+  <div class="live-track" id="liveTrack">
+    <button class="live-card l1" data-live="Rocket"><span>🚀</span></button>
+    <button class="live-card l2" data-live="Gift"><span>🎁</span></button>
+    <button class="live-card l3" data-live="Token"><span>◆</span></button>
+    <button class="live-card l4" data-live="Lucky"><span>🍀</span></button>
+    <button class="live-card l5" data-live="Star"><span>⭐</span></button>
+    <button class="live-card l6" data-live="Box"><span>💎</span></button>
+  </div>
+</section>
 
-    <section class="hero-stack">
-      <button class="hero rocket" data-action="rocket">
-        <div class="hero-bg-grid"></div><div class="hero-copy"><span class="tag white"><span class="tag-bolt">⚡</span> HOT!</span><div class="hero-title"><span class="title-rocket-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19 4c5 1 8 4 9 9-2 6-6 10-12 12l-5-5c2-6 6-10 8-16Z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><circle cx="20.5" cy="11.5" r="2.3" fill="currentColor"/><path d="M11 18 5 19l4 4 2-5ZM14 23l-1 5 4-4-3-1Z" fill="currentColor"/></svg></span> ROCKET</div></div>
-        <span class="mult m1">x6.30</span><span class="mult m2">x2.18</span><span class="mult m3">x3.44</span><span class="mult m4">x1.54</span>
-        <div class="rocket-particles"><i></i><i></i><i></i><i></i><i></i></div><div class="rocket-trail"></div><div class="rocket-svg" aria-hidden="true"><svg viewBox="0 0 260 210"><defs><linearGradient id="rocketBody" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".55" stop-color="#f6f9ff"/><stop offset="1" stop-color="#b9d8ff"/></linearGradient><linearGradient id="rocketNose" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#8fc1ff"/></linearGradient><linearGradient id="rocketFire" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff36b"/><stop offset=".55" stop-color="#ffb32e"/><stop offset="1" stop-color="#ff4e45"/></linearGradient><filter id="rocketGlow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g class="rocket-body-group"><g transform="translate(130 103) rotate(-22)"><path d="M0-88C38-72 57-38 52 5c-3 31-18 56-52 76-34-20-49-45-52-76-5-43 14-77 52-93Z" fill="url(#rocketBody)" stroke="#dcecff" stroke-width="2"/><path d="M0-88c22 9 39 23 48 42-16 8-33 12-48 12s-32-4-48-12C-39-65-22-79 0-88Z" fill="url(#rocketNose)"/><path d="M-48 8-83 26l29 23 22-20Z" fill="#ef4656"/><path d="M48 8 83 26 54 49 32 29Z" fill="#ef4656"/><path d="M-29 56c8 23 18 35 29 43 11-8 21-20 29-43-18 8-40 8-58 0Z" fill="url(#rocketFire)" filter="url(#rocketGlow)"/><path class="rocket-fire-inner" d="M-15 59c4 13 9 22 15 28 6-6 11-15 15-28-10 4-20 4-30 0Z" fill="#fff7a6"/><ellipse cx="0" cy="-10" rx="24" ry="27" fill="#5da7f0" stroke="#dff2ff" stroke-width="5"/><path d="M-12-20c12 2 19 10 20 21" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><circle cx="19" cy="-49" r="4" fill="#ff6680"/><circle cx="28" cy="-41" r="3" fill="#ffd45e"/></g></g></svg></div>
-      </button>
+<section class="hero-stack">
+  <button class="hero rocket" id="rocketCard">
+    <div class="rocket-bg"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+    <div class="hero-copy"><span class="tag hot">⚡ HOT!</span><div class="hero-title">🚀 ROCKET</div><div class="rocket-status" id="rocketStatus">Tap to launch demo</div></div>
+    <span class="mult m1">x6.30</span><span class="mult m2">x2.18</span><span class="mult m3">x3.44</span><span class="mult m4">x1.54</span>
+    <div class="rocket-wrap" id="rocketWrap"><div class="rocket-art"><div class="nose"></div><div class="window"></div><div class="fin left"></div><div class="fin right"></div><div class="body-stripe"></div><div class="flame"><b></b></div></div></div>
+    <div class="trail" id="trail"></div><div class="stars">✦　·　✧　·　✦</div>
+  </button>
 
-      <button class="hero pvp" data-action="pvp">
-        <div class="shine"></div><div class="hero-copy"><span class="tag white"><span class="tag-flame">♨</span> NEW!</span><div class="hero-title"><span class="title-swords">⚔</span> PVP</div></div>
-        <div class="player-strip"><div class="player"><span class="coin">◉</span><b>CRYPTO</b><small>7.4%</small></div><div class="player active"><span class="face f1">◉</span><b>DEGEN</b><small>7.0%</small></div><div class="player active"><span class="face f2">◉</span><b>MIKE_K</b><small>13.7%</small></div></div>
-      </button>
+  <button class="hero pvp" id="pvpCard">
+    <div class="pvp-bg"></div><span class="tag new">🔥 NEW!</span><div class="pvp-title">⚔ PVP</div>
+    <div class="players"><div class="player"><span>🥷</span><b>CRYPTO</b><small>7.4%</small></div><div class="player"><span>🤖</span><b>DEGEN</b><small>7.0%</small></div><div class="player"><span>🧑‍🚀</span><b>MIKE_K</b><small>13.7%</small></div></div>
+  </button>
 
-      <button class="hero hub" data-action="hub">
-        <div class="hero-copy"><span class="tag white"><span class="tag-flame">♨</span> HOT</span><div class="hero-title"><span class="title-game">⌘</span> PLAY HUB</div></div>
-        <div class="hub-art"><div class="hub-card up">↗<b>Upgrade</b><small>24%</small></div><div class="hub-card pl">• • •<b>Plinko</b></div><div class="hub-card mi">▦<b>Mines</b></div></div>
-      </button>
-    </section>
+  <button class="hero hub" id="hubCard"><div class="hub-bg"></div><span class="tag hubtag">🔥 HOT</span><div class="hub-title">🎮 PLAY HUB</div><div class="games"><span class="g upgrade">⚙<b>Upgrade</b></span><span class="g plinko">●<b>Plinko</b></span><span class="g mines">✹<b>Mines</b></span></div></button>
 
-    <section class="free-grid">
-      <button class="free-card free24" data-action="free24"><span class="free-name">FREE<span>24</span></span><div class="free-art chain"><span>✦</span><b>∞</b><i>✦</i></div></button>
-      <button class="free-card free" data-action="free"><span class="free-name">FREE</span><div class="free-art gift-art"><span>★</span><div class="bucket"></div><i>🍭</i></div></button>
-    </section>
+  <div class="promo-row"><button class="promo free24" id="free24"><b>FREE24</b><span>🏆</span><small>Daily reward</small></button><button class="promo free" id="free"><b>FREE</b><span>🎁</span><small>Claim gift</small></button></div>
+</section>
 
-    <section class="boxes"><div class="section-line"><h2>Gift Boxes</h2><button id="viewAll">View all</button></div><div class="box-grid">
-      <button class="box-card" data-box="Farm"><div class="box-visual farm-v"><div class="box-svg frog">◉</div><span>FARM</span></div><div class="box-meta"><b>Farm</b><em>0.1 TON</em></div></button>
-      <button class="box-card" data-box="Autumn"><div class="box-visual autumn-v"><div class="box-svg hat">◒</div><span>AUTUMN</span></div><div class="box-meta"><b>Autumn</b><em>3.5 TON</em></div></button>
-      <button class="box-card" data-box="Movie"><div class="box-visual movie-v"><div class="box-svg movie-i">▶</div><span>MOVIE</span></div><div class="box-meta"><b>Movie</b><em>4 TON</em></div></button>
-      <button class="box-card" data-box="Space"><div class="box-visual space-v"><div class="box-svg planet">◌</div><span>SPACE</span></div><div class="box-meta"><b>Space</b><em>6 TON</em></div></button>
-    </div></section>
-  </main>
+<section class="boxes"><div class="section-line"><h2>Gift Boxes</h2><button id="viewAll">View all</button></div><div class="box-grid">
+<button class="box-card" data-box="Farm"><div class="box-art farm">🐸</div><b>Farm</b><small>0.1 TON</small></button>
+<button class="box-card" data-box="Autumn"><div class="box-art autumn">🍂</div><b>Autumn</b><small>3.5 TON</small></button>
+<button class="box-card" data-box="Movie"><div class="box-art movie">🎬</div><b>Movie</b><small>4 TON</small></button>
+<button class="box-card" data-box="Space"><div class="box-art space">🪐</div><b>Space</b><small>6 TON</small></button>
+</div></section>
+</main>
 
-  <nav class="bottom-nav" id="nav"><button data-page="backpack"><span>▣</span><small>Backpack</small></button><button data-page="invite"><span>♧</span><small>Invite</small></button><button class="active" data-page="home"><span>⌂</span><small>Home</small></button><button data-page="leaderboard"><span>♜</span><small>Leaderboard</small></button><button data-page="p2p"><span>⇄</span><small>P2P</small></button></nav>
-  <div class="modal hidden" id="modal"><div class="modal-box"><button id="modalX" class="modal-x">×</button><div id="modalIcon" class="modal-icon">✨</div><h3 id="modalTitle">Epic Gift</h3><p id="modalText"></p><button id="modalOk" class="modal-ok">OK</button></div></div>
+<nav class="bottom-nav" id="nav"><button data-page="backpack"><span>🎒</span><small>Backpack</small></button><button data-page="invite"><span>👥</span><small>Invite</small></button><button class="active" data-page="home"><span>⌂</span><small>Home</small></button><button data-page="leaderboard"><span>🏆</span><small>Leaderboard</small></button><button data-page="p2p"><span>⇄</span><small>P2P</small></button></nav>
+
+<div class="modal hidden" id="modal"><div class="modal-box"><button id="modalX" class="modal-x">×</button><div id="modalIcon" class="modal-icon">✨</div><h3 id="modalTitle">Epic Gift</h3><p id="modalText"></p><button id="modalOk" class="modal-ok">OK</button></div></div>
 </div>
 <script src="epic_gift.js"></script>
-</body>
-</html>
+</body></html>
