@@ -12,22 +12,22 @@
 <div id="app">
 <header class="appbar">
   <button class="icon-btn close-btn" id="closeBtn" aria-label="Close">×</button>
-  <div class="brand"><span class="emoji">🎁</span><span>Epic Gift</span></div>
+  <div class="brand"><span class="brand-gift icon-svg" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ff5f8f"/><stop offset="1" stop-color="#ffb72f"/></linearGradient></defs><rect x="8" y="24" width="48" height="31" rx="7" fill="url(#g)"/><path d="M32 24v31M8 33h48" stroke="#fff" stroke-width="5" opacity=".9"/><path d="M31 24c-11 0-17-3-17-9 0-5 4-8 9-8 8 0 9 9 9 17Zm2 0c11 0 17-3 17-9 0-5-4-8-9-8-8 0-9 9-9 17Z" fill="#ffcc52"/></svg></span><span>Epic Gift</span></div>
   <div class="app-actions"><button class="icon-btn" id="dropBtn">⌄</button><button class="icon-btn" id="menuBtn">⋮</button></div>
 </header>
 <main id="page">
 <section class="balance card">
   <div class="avatar"><span></span></div>
-  <div class="balance-info"><div class="label">Your balance</div><div class="amount"><span class="ton-mark">◇</span><b>12.057</b></div></div>
-  <button class="primary-btn" id="deposit"><span class="emoji">▣</span> Deposit</button>
+  <div class="balance-info"><div class="label">Your balance</div><div class="amount"><span class="ton-mark" aria-label="TON"><svg viewBox="0 0 64 64"><path d="M8 12h48L32 53 8 12Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M8 12l24 41V12M56 12L32 53" fill="none" stroke="currentColor" stroke-width="5"/></svg></span><b>12.057</b></div></div>
+  <button class="primary-btn" id="deposit"><span class="deposit-icon icon-svg"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Deposit</button>
 </section>
 <section class="live"><div class="section-head"><span class="live-dot"></span><b>Live</b></div>
   <div class="live-row">
-    <button class="live-item dark"><span class="emoji">〽️</span></button><button class="live-item cyan"><span class="emoji">🔷</span></button><button class="live-item gray"><span class="emoji">♣️</span></button><button class="live-item green"><span class="emoji">●</span></button><button class="live-item pink"><span class="emoji">🔶</span></button>
+    <button class="live-item dark"><span class="live-glyph yellow-glyph">⌁</span></button><button class="live-item cyan"><span class="live-glyph blue-glyph">◆</span></button><button class="live-item gray"><span class="live-glyph">♣</span></button><button class="live-item green"><span class="live-glyph white-glyph">●</span></button><button class="live-item pink"><span class="live-glyph orange-glyph">◆</span></button>
   </div>
 </section>
 <section class="feature-list">
-  <button class="feature rocket-card" data-action="rocket"><div class="feature-copy"><small>PLAY MODE</small><h2>Rocket</h2></div><div class="rocket-art emoji">🚀</div><span class="x x1">x5.66</span><span class="x x2">x2.05</span><span class="x x3">x3.28</span></button>
+  <button class="feature rocket-card" data-action="rocket"><div class="feature-copy"><small>PLAY MODE</small><h2>Rocket</h2></div><div class="rocket-art" aria-hidden="true"><svg viewBox="0 0 180 180"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".45" stop-color="#f1f5ff"/><stop offset="1" stop-color="#a9c8ff"/></linearGradient><linearGradient id="fl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd85a"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs><g transform="rotate(-24 90 90)"><path d="M90 15c34 16 49 48 45 83-3 26-17 42-45 59-28-17-42-33-45-59-4-35 11-67 45-83Z" fill="url(#rg)"/><circle cx="90" cy="74" r="18" fill="#5c87f5"/><circle cx="84" cy="68" r="6" fill="#fff" opacity=".8"/><path d="M45 78 18 92l24 14M135 78l27 14-24 14" fill="#d7e5ff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/><path d="M71 145c7 16 12 20 19 22 7-2 12-6 19-22-10 5-28 5-38 0Z" fill="url(#fl)"/><path d="M78 146c4 11 7 14 12 16 5-2 8-5 12-16-7 3-17 3-24 0Z" fill="#fff3a0"/></g></svg></div><span class="x x1">x5.66</span><span class="x x2">x2.05</span><span class="x x3">x3.28</span></button>
   <button class="feature pvp-card" data-action="pvp"><div class="feature-copy"><small>BATTLE MODE</small><h2>PvP</h2></div><div class="pvp-players"><i>CRYPTO<br><b>3.7%</b></i><i>DEGEN<br><b>7.1%</b></i><i>MIKE_K<br><b>5.2%</b></i><i>TONN<br><b>4.4%</b></i></div></button>
   <button class="feature hub-card" data-action="hub"><div class="feature-copy"><small>DISCOVER</small><h2>Play Hub</h2></div><div class="hub-pills"><i>Upgrade</i><i>Plinko</i><i>Mines</i></div></button>
 </section>

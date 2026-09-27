@@ -1,5 +1,5 @@
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
-function emoji(){if(window.twemoji) twemoji.parse(document.body,{folder:'svg',ext:'.svg'});}
+function emoji(){if(window.twemoji) twemoji.parse(document.body,{folder:'svg',ext:'.svg',className:'emoji'});}
 function openModal(title,text,icon='✨'){ $('#modalTitle').textContent=title; $('#modalText').textContent=text; $('#modalIcon').textContent=icon; $('#modal').classList.remove('hidden'); emoji(); }
 function closeModal(){ $('#modal').classList.add('hidden'); }
 $('#modalX').onclick=closeModal; $('#modalOk').onclick=closeModal; $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
