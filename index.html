@@ -3,80 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="theme-color" content="#15161b">
-<title>Epic Gift</title>
+<meta name="theme-color" content="#101116">
+<title>Epic Gift V5</title>
 <link rel="stylesheet" href="epic_gift.css">
+<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@17.0.3/dist/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="app">
-  <header class="appbar">
-    <button class="close-btn" id="closeBtn">× <span>Close</span></button>
-    <div class="brand"><span class="brand-gift">🎁</span><span>Epic Gift</span></div>
-    <div class="app-actions"><button>⌄</button><button id="menuBtn">⋮</button></div>
-  </header>
-
-  <main>
-    <section class="balance">
-      <div class="avatar"><span></span></div>
-      <div class="balance-info">
-        <div class="label">Your balance</div>
-        <div class="amount"><span class="ton">◇</span><b>12.057</b></div>
-      </div>
-      <button class="deposit" id="deposit">▣&nbsp; Deposit</button>
-    </section>
-
-    <section class="live">
-      <div class="section-head"><span class="live-dot"></span><b>Live</b></div>
-      <div class="live-row">
-        <div class="live-item hat"><span>⌁</span></div>
-        <div class="live-item cyan"><span>◇</span></div>
-        <div class="live-item cat"><span>♣</span></div>
-        <div class="live-item frog"><span>●</span></div>
-        <div class="live-item pink"><span>◇</span></div>
-        <div class="live-item blue"><span>✦</span></div>
-      </div>
-    </section>
-
-    <section class="feature-list">
-      <article class="feature rocket-card">
-        <div class="feature-copy"><small>PLAY MODE</small><h2>Rocket</h2></div>
-        <div class="rocket-shape">🚀</div>
-        <span class="x x1">x5.66</span><span class="x x2">x2.05</span><span class="x x3">x3.28</span>
-      </article>
-      <article class="feature pvp-card">
-        <div class="feature-copy"><small>BATTLE MODE</small><h2>PvP</h2></div>
-        <div class="pvp-players"><i>CRYPTO<br><b>3.7%</b></i><i>DEGEN<br><b>7.1%</b></i><i>MIKE_K<br><b>5.2%</b></i><i>TONN<br><b>4.4%</b></i></div>
-      </article>
-      <article class="feature hub-card">
-        <div class="feature-copy"><small>DISCOVER</small><h2>Play Hub</h2></div>
-        <div class="hub-pills"><i>Upgrade</i><i>Plinko</i><i>Mines</i></div>
-      </article>
-    </section>
-
-    <section class="free-row">
-      <article class="free-card free24"><div class="free-label">FREE<span>24</span></div><div class="free-art">💎</div><b>Every 24 hours</b></article>
-      <article class="free-card free0"><div class="free-label">FREE</div><div class="free-art">🎁</div><b>Free gift</b></article>
-    </section>
-
-    <section class="boxes">
-      <div class="title-row"><h2>Gift Boxes</h2><button>View all</button></div>
-      <div class="box-grid">
-        <article class="box-card farm"><div class="box-art"><div class="box-icon">🐸</div><span>FARM</span></div><div class="box-meta"><b>Farm</b><button>0.1 ◇</button></div></article>
-        <article class="box-card autumn"><div class="box-art"><div class="box-icon">🧢</div><span>AUTUMN</span></div><div class="box-meta"><b>Autumn</b><button>3.5 ◇</button></div></article>
-        <article class="box-card movie"><div class="box-art"><div class="box-icon">🎬</div><span>MOVIE</span></div><div class="box-meta"><b>Movie</b><button>4 ◇</button></div></article>
-        <article class="box-card space"><div class="box-art"><div class="box-icon">🪐</div><span>SPACE</span></div><div class="box-meta"><b>Space</b><button>6 ◇</button></div></article>
-      </div>
-    </section>
-  </main>
-
-  <nav class="bottom-nav">
-    <button><span>▣</span><small>Backpack</small></button>
-    <button><span>♧</span><small>Invite</small></button>
-    <button class="active"><span>⌂</span><small>Home</small></button>
-    <button><span>♜</span><small>Leaderboard</small></button>
-    <button><span>⇄</span><small>P2P</small></button>
-  </nav>
+<header class="appbar">
+  <button class="icon-btn close-btn" id="closeBtn" aria-label="Close">×</button>
+  <div class="brand"><span class="emoji">🎁</span><span>Epic Gift</span></div>
+  <div class="app-actions"><button class="icon-btn" id="dropBtn">⌄</button><button class="icon-btn" id="menuBtn">⋮</button></div>
+</header>
+<main id="page">
+<section class="balance card">
+  <div class="avatar"><span></span></div>
+  <div class="balance-info"><div class="label">Your balance</div><div class="amount"><span class="ton-mark">◇</span><b>12.057</b></div></div>
+  <button class="primary-btn" id="deposit"><span class="emoji">▣</span> Deposit</button>
+</section>
+<section class="live"><div class="section-head"><span class="live-dot"></span><b>Live</b></div>
+  <div class="live-row">
+    <button class="live-item dark"><span class="emoji">〽️</span></button><button class="live-item cyan"><span class="emoji">🔷</span></button><button class="live-item gray"><span class="emoji">♣️</span></button><button class="live-item green"><span class="emoji">●</span></button><button class="live-item pink"><span class="emoji">🔶</span></button>
+  </div>
+</section>
+<section class="feature-list">
+  <button class="feature rocket-card" data-action="rocket"><div class="feature-copy"><small>PLAY MODE</small><h2>Rocket</h2></div><div class="rocket-art emoji">🚀</div><span class="x x1">x5.66</span><span class="x x2">x2.05</span><span class="x x3">x3.28</span></button>
+  <button class="feature pvp-card" data-action="pvp"><div class="feature-copy"><small>BATTLE MODE</small><h2>PvP</h2></div><div class="pvp-players"><i>CRYPTO<br><b>3.7%</b></i><i>DEGEN<br><b>7.1%</b></i><i>MIKE_K<br><b>5.2%</b></i><i>TONN<br><b>4.4%</b></i></div></button>
+  <button class="feature hub-card" data-action="hub"><div class="feature-copy"><small>DISCOVER</small><h2>Play Hub</h2></div><div class="hub-pills"><i>Upgrade</i><i>Plinko</i><i>Mines</i></div></button>
+</section>
+<section class="free-row"><button class="free-card free24" data-action="free24"><div class="free-label">FREE<span>24</span></div><div class="free-art emoji">💎</div><b>Every 24 hours</b></button><button class="free-card free0" data-action="free"><div class="free-label">FREE</div><div class="free-art emoji">🎁</div><b>Free gift</b></button></section>
+<section class="boxes"><div class="title-row"><h2>Gift Boxes</h2><button id="viewAll">View all</button></div><div class="box-grid">
+<button class="box-card farm" data-box="Farm"><div class="box-art"><div class="box-icon emoji">🐸</div><span>FARM</span></div><div class="box-meta"><b>Farm</b><span>0.1 ◇</span></div></button>
+<button class="box-card autumn" data-box="Autumn"><div class="box-art"><div class="box-icon emoji">🧢</div><span>AUTUMN</span></div><div class="box-meta"><b>Autumn</b><span>3.5 ◇</span></div></button>
+<button class="box-card movie" data-box="Movie"><div class="box-art"><div class="box-icon emoji">🎬</div><span>MOVIE</span></div><div class="box-meta"><b>Movie</b><span>4 ◇</span></div></button>
+<button class="box-card space" data-box="Space"><div class="box-art"><div class="box-icon emoji">🪐</div><span>SPACE</span></div><div class="box-meta"><b>Space</b><span>6 ◇</span></div></button>
+</div></section>
+</main>
+<nav class="bottom-nav" id="nav"><button data-page="backpack"><span>▣</span><small>Backpack</small></button><button data-page="invite"><span>♧</span><small>Invite</small></button><button class="active" data-page="home"><span>⌂</span><small>Home</small></button><button data-page="leaderboard"><span>♜</span><small>Leaderboard</small></button><button data-page="p2p"><span>⇄</span><small>P2P</small></button></nav>
+<div class="modal hidden" id="modal"><div class="modal-box"><button class="modal-x" id="modalX">×</button><div id="modalIcon" class="modal-icon emoji">✨</div><h3 id="modalTitle">Epic Gift</h3><p id="modalText">Demo section.</p><button class="primary-btn modal-ok" id="modalOk">OK</button></div></div>
 </div>
 <script src="epic_gift.js"></script>
-</body>
-</html>
+</body></html>
