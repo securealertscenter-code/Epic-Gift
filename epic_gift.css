@@ -61,3 +61,48 @@ body{background:#0f1013!important}
 @keyframes liveIconPulse{0%,100%{transform:scale(.96) rotate(-3deg)}50%{transform:scale(1.08) rotate(3deg)}}
 @media(max-width:500px){.balance-row{padding:21px 29px!important}.deposit{width:192px!important;flex-basis:192px!important}.hero-stack{padding-left:29px!important;padding-right:29px!important}.hero{height:184px!important}.rocket-svg{width:218px!important;height:184px!important;right:-5px!important}.m1{right:167px!important}.m2{right:78px!important}.m3{right:4px!important}.m4{right:23px!important}.player{width:73px!important}.free-card{height:220px!important}}
 @media(max-width:390px){.balance-row{padding-left:17px!important;padding-right:17px!important}.avatar{width:70px!important;height:70px!important;min-width:70px!important}.deposit{width:150px!important;flex-basis:150px!important;font-size:20px!important}.amount strong{font-size:31px!important}.hero-stack{padding-left:17px!important;padding-right:17px!important}.hero{height:180px!important}.rocket-svg{width:205px!important;height:175px!important}.m1{right:142px!important}.m2{right:69px!important}.m3{right:2px!important}.player{width:68px!important}.free-grid{padding-left:17px!important;padding-right:17px!important}}
+
+/* V11 — reference polish: colorful rocket + live-gift visuals */
+.live-card{overflow:hidden!important;display:grid!important;place-items:center!important}
+.live-card.cap{background:linear-gradient(135deg,#3f8de9,#4a8fdf)!important}
+.live-card.ton{background:linear-gradient(135deg,#19b99f,#21c5a7)!important}
+.live-card.cat{background:linear-gradient(135deg,#f5b91d,#ffb817)!important}
+.live-card.frog{background:linear-gradient(135deg,#4d95ed,#438de2)!important}
+.live-card svg{width:67px!important;height:67px!important;filter:drop-shadow(0 5px 5px #0002)}
+.rocket{position:relative!important;overflow:hidden!important;background:
+  linear-gradient(120deg,#8dc0ed 0%,#6aaae9 42%,#4c93df 100%)!important}
+.rocket:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(125deg,transparent 0 62px,#ffffff18 63px 66px);transform:translateX(-10%);animation:bgSweep 5s linear infinite;pointer-events:none}
+.rocket:after{content:"";position:absolute;width:270px;height:270px;right:-70px;bottom:-160px;border-radius:50%;background:#ffffff10;pointer-events:none}
+.hero-bg-grid{position:absolute;inset:0;background:radial-gradient(circle at 18% 28%,#fff7 0 2px,transparent 3px),radial-gradient(circle at 55% 20%,#fff8 0 2px,transparent 3px),radial-gradient(circle at 72% 65%,#fff6 0 2px,transparent 3px);background-size:120px 90px,160px 110px,130px 100px;opacity:.55;animation:starsDrift 4.5s linear infinite;pointer-events:none}
+.rocket-svg{will-change:transform;filter:drop-shadow(0 14px 14px #2464a855)!important}
+.rocket-svg .rocket-body-group{transform-box:fill-box;transform-origin:center;animation:rocketFloat 2.5s ease-in-out infinite}
+.rocket-svg .rocket-fire-inner{transform-box:fill-box;transform-origin:center top;animation:fireFlicker .22s ease-in-out infinite alternate}
+.rocket-trail{animation:trailPulse .55s ease-in-out infinite alternate!important}
+.rocket-particles i{box-shadow:0 0 8px #fff;animation:particleFly 1.35s linear infinite!important}
+@keyframes rocketFloat{0%,100%{transform:translate(130px,103px) rotate(-22deg)}25%{transform:translate(125px,96px) rotate(-19deg)}50%{transform:translate(136px,88px) rotate(-24deg)}75%{transform:translate(128px,96px) rotate(-20deg)}}
+@keyframes fireFlicker{from{transform:scaleY(.78) scaleX(.92)}to{transform:scaleY(1.18) scaleX(1.08)}}
+@keyframes bgSweep{from{transform:translateX(-35%)}to{transform:translateX(20%)}}
+@keyframes starsDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(18px,-8px,0)}}
+@media(max-width:500px){.rocket-svg{right:-12px!important;top:-9px!important;width:235px!important;height:195px!important}.rocket .hero-copy{z-index:5}.rocket .mult{z-index:6}.rocket-particles{z-index:4!important}}
+
+/* V11 — closer to the supplied reference */
+.live-card{overflow:hidden!important;display:grid!important;place-items:center!important}
+.live-card.cap{background:linear-gradient(135deg,#3f8de9,#4a8fdf)!important}
+.live-card.ton{background:linear-gradient(135deg,#19b99f,#21c5a7)!important}
+.live-card.cat{background:linear-gradient(135deg,#f5b91d,#ffb817)!important}
+.live-card.frog{background:linear-gradient(135deg,#4d95ed,#438de2)!important}
+.live-card svg{width:67px!important;height:67px!important;filter:drop-shadow(0 5px 5px #0002)}
+.rocket{position:relative!important;overflow:hidden!important;background:linear-gradient(120deg,#8dc0ed 0%,#6aaae9 42%,#4c93df 100%)!important}
+.rocket:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(125deg,transparent 0 62px,#ffffff18 63px 66px);transform:translateX(-10%);animation:bgSweep 5s linear infinite;pointer-events:none}
+.rocket:after{content:"";position:absolute;width:270px;height:270px;right:-70px;bottom:-160px;border-radius:50%;background:#ffffff10;pointer-events:none}
+.hero-bg-grid{position:absolute;inset:0;background:radial-gradient(circle at 18% 28%,#fff7 0 2px,transparent 3px),radial-gradient(circle at 55% 20%,#fff8 0 2px,transparent 3px),radial-gradient(circle at 72% 65%,#fff6 0 2px,transparent 3px);background-size:120px 90px,160px 110px,130px 100px;opacity:.55;animation:starsDrift 4.5s linear infinite;pointer-events:none}
+.rocket-svg{will-change:transform;filter:drop-shadow(0 14px 14px #2464a855)!important}
+.rocket-svg .rocket-body-group{transform-box:fill-box;transform-origin:center;animation:rocketFloat 2.5s ease-in-out infinite}
+.rocket-svg .rocket-fire-inner{transform-box:fill-box;transform-origin:center top;animation:fireFlicker .22s ease-in-out infinite alternate}
+.rocket-trail{animation:trailPulse .55s ease-in-out infinite alternate!important}
+.rocket-particles i{box-shadow:0 0 8px #fff;animation:particleFly 1.35s linear infinite!important}
+@keyframes rocketFloat{0%,100%{transform:translate(130px,103px) rotate(-22deg)}25%{transform:translate(125px,96px) rotate(-19deg)}50%{transform:translate(136px,88px) rotate(-24deg)}75%{transform:translate(128px,96px) rotate(-20deg)}}
+@keyframes fireFlicker{from{transform:scaleY(.78) scaleX(.92)}to{transform:scaleY(1.18) scaleX(1.08)}}
+@keyframes bgSweep{from{transform:translateX(-35%)}to{transform:translateX(20%)}}
+@keyframes starsDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(18px,-8px,0)}}
+@media(max-width:500px){.rocket-svg{right:-12px!important;top:-9px!important;width:235px!important;height:195px!important}.rocket .hero-copy{z-index:5}.rocket .mult{z-index:6}.rocket-particles{z-index:4!important}}
