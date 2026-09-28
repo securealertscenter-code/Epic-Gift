@@ -28,7 +28,7 @@
       <div class="multipliers"><b>x5.66</b><b>x3.28</b><b>x2.05</b><b>x1.24</b></div>
     <button class="rocket-launch" id="rocketLaunch">Launch Demo</button>
       <div class="demo-panel" id="demoPanel">
-        <div class="demo-panel-title">Demo amount</div>
+        <div class="demo-panel-title">Demo amount • <span id="selectedAmount">0.5 Demo</span></div>
         <div class="amount-options" id="amountOptions">
           <button data-amount="0.1">0.1 TON</button>
           <button data-amount="0.5">0.5 TON</button>
@@ -54,6 +54,14 @@
   <nav class="bottom"><button data-page="backpack">▣<span>Backpack</span></button><button data-page="invite">♧<span>Invite</span></button><button class="active" data-page="home">⌂<span>Home</span></button><button data-page="leaderboard">♛<span>Leaderboard</span></button><button data-page="p2p">⇄<span>P2P</span></button></nav>
 </div>
 <div class="toast" id="toast"></div>
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">×</button>
+    <h3 id="modalTitle">Epic Gift</h3>
+    <div id="modalText"></div>
+    <div id="modalActions"></div>
+  </div>
+</div>
 <script src="app.js"></script>
 </body>
 </html>
