@@ -15,7 +15,7 @@
   </header>
 
   <section class="balance">
-    <div class="profile"><div class="avatar">●</div><div><div class="muted">Your balance</div><div class="amount"><span class="ton">◆</span> 12.057</div></div></div>
+    <div class="profile"><div class="avatar">●</div><div><div class="muted">Your balance</div><div class="amount"><span class="ton">◆</span> <span id="balanceValue">12.057</span></div></div></div>
     <button class="deposit">Deposit</button>
   </section>
 
@@ -23,9 +23,20 @@
     <section class="live"><div class="live-title"><i></i><span>Live</span></div><div class="live-row" id="liveRow"></div></section>
 
     <section class="hero rocket-card">
-      <div class="tag">HOT!</div><h1>ROCKET</h1><div class="rocket-copy">Watch the multiplier rise</div>
+      <div class="tag">HOT!</div><h1>ROCKET</h1><div class="rocket-copy">Demo mode • choose an amount and launch</div>
       <div class="rocket-art"><div class="flame"></div><div class="rocket-body"><span></span></div></div>
       <div class="multipliers"><b>x5.66</b><b>x3.28</b><b>x2.05</b><b>x1.24</b></div>
+    <button class="rocket-launch" id="rocketLaunch">Launch Demo</button>
+      <div class="demo-panel" id="demoPanel">
+        <div class="demo-panel-title">Demo amount</div>
+        <div class="amount-options" id="amountOptions">
+          <button data-amount="0.1">0.1 TON</button>
+          <button data-amount="0.5">0.5 TON</button>
+          <button data-amount="1">1 TON</button>
+          <button data-amount="2">2 TON</button>
+        </div>
+        <div class="demo-note">Demo credits only — no real TON is used.</div>
+      </div>
     </section>
 
     <section class="hero pvp-card">
