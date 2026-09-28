@@ -1,5 +1,58 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Epic Gift — Demo</title><link rel="stylesheet" href="style.css"></head><body><header class="top"><button class="pill">✕ Close</button><div class="brand"><span>✦</span> Epic Gift</div><button class="icon">⌄</button><button class="icon">⋮</button></header><section class="balance"><div class="avatar">●</div><div><div class="muted">Your balance</div><div class="bal"><b>◆</b> <span id="balance">12.057</span></div></div><button class="deposit">Deposit</button></section><main><div class="section-title"><i></i> Live</div><div class="live"><div class="live-card rocket" onclick="location.href='rocket.html'"><span>🚀</span></div><div class="live-card green"><span>🎁</span></div><div class="live-card blue"><span>◆</span></div><div class="live-card green"><span>☘</span></div><div class="live-card purple"><span>★</span></div></div><button class="rocket-banner" onclick="location.href='rocket.html'"><div class="hot">⚡ HOT!</div><div class="rocket-title">🚀 ROCKET</div><div class="sub">Tap to open demo Rocket</div><div class="rocket-art">🚀</div><span class="multi m1">x6.30</span><span class="multi m2">x3.44</span><span class="multi m3">x2.18</span><span class="multi m4">x1.54</span></button><div class="pvp"><span class="new">NEW!</span><h2>⚔ PVP</h2></div></main><nav><div>🎒<small>Backpack</small></div><div>♣<small>Invite</small></div><div class="active">⌂<small>Home</small></div><div>♛<small>Leaderboard</small></div><div>⇄<small>P2P</small></div></nav><script>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11131a"><title>Epic Gift</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="round-btn" id="closeBtn">×</button>
+<div class="brand"><span class="brand-icon">✦</span><span>Epic Gift</span></div>
+<button class="round-btn" id="menuBtn">⋮</button>
+</header>
+<main class="home">
+<section class="balance-card">
+<div class="avatar">◆</div>
+<div class="balance-info"><span>موجودی امتیاز</span><strong id="balance">12,057</strong></div>
+<div class="balance-label">POINTS</div>
+</section>
+<div class="section-heading"><div><span class="live-dot"></span><strong>بازی‌های فعال</strong></div><span class="online-text">Live</span></div>
+<section class="live-row">
+<button class="game-mini rocket-mini" onclick="location.href='rocket.html'"><span>🚀</span><small>Rocket</small></button>
+<button class="game-mini gift-mini"><span>🎁</span><small>Gift</small></button>
+<button class="game-mini diamond-mini"><span>◆</span><small>Diamond</small></button>
+<button class="game-mini lucky-mini"><span>☘</span><small>Lucky</small></button>
+</section>
+<button class="rocket-card" onclick="location.href='rocket.html'">
+<div class="rocket-glow"></div>
+<div class="rocket-content"><span class="hot-badge">⚡ فعال</span><h1>🚀 ROCKET</h1><p>بازی را شروع کن و ضریب را دنبال کن</p><div class="play-label">شروع بازی <span>←</span></div></div>
+<div class="rocket-image">🚀</div>
+<span class="floating-mult m1">x1.54</span><span class="floating-mult m2">x2.18</span><span class="floating-mult m3">x3.44</span><span class="floating-mult m4">x6.30</span>
+</button>
+<section class="players-card">
+<div class="players-title"><div><span class="live-dot"></span><strong>بازیکنان فعال</strong></div><span id="onlineCount">1 نفر</span></div>
+<div id="playersList">
+<div class="player-row"><div class="player-avatar">🧑</div><div class="player-info"><strong>MEHDY</strong><small>در حال بازی</small></div><span class="online-badge">ONLINE</span></div>
+<div class="player-row"><div class="player-avatar">🐺</div><div class="player-info"><strong>Reza</strong><small>آماده</small></div><span class="online-badge">ONLINE</span></div>
+</div>
+</section>
+<section class="more-grid">
+<button><span>🎒</span><strong>کوله‌پشتی</strong><small>جوایز شما</small></button>
+<button><span>♛</span><strong>رتبه‌ها</strong><small>جدول امتیازات</small></button>
+<button><span>♣</span><strong>دعوت</strong><small>دعوت دوستان</small></button>
+</section>
+</main>
+<nav class="bottom-nav">
+<button><span>🎒</span><small>کوله</small></button><button><span>♣</span><small>دعوت</small></button>
+<button class="active"><span>⌂</span><small>خانه</small></button><button><span>♛</span><small>رتبه‌ها</small></button><button><span>⇄</span><small>بازی</small></button>
+</nav>
+<script>
 const balanceEl=document.getElementById("balance");
-const demoBalance=Number(localStorage.getItem("epic_demo_balance")||"12.057");
-balanceEl.textContent=demoBalance.toFixed(3);
-</script></body></html>
+const saved=Number(localStorage.getItem("epic_points")||"12057");
+balanceEl.textContent=saved.toLocaleString("fa-IR");
+document.getElementById("closeBtn").onclick=()=>history.back();
+document.getElementById("menuBtn").onclick=()=>alert("Epic Gift\n\nبازی امتیازی");
+</script>
+</body>
+</html>

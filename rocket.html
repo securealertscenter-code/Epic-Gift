@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rocket — Epic Gift Demo</title><link rel="stylesheet" href="style.css"></head><body class="rocket-page"><header class="top"><button class="pill" onclick="history.back()">← Back</button><div class="brand"><span>🎁</span> Epic Gift</div><div class="right-icons"><button class="icon">⌄</button><button class="icon">⋮</button></div></header><section class="rocket-stage"><div class="curve"></div><div class="stars">•　✦　•　　　•　　✦　•</div><div class="big-x" id="multiplier">10.37x</div><div class="history"><span class="gold">10.4x</span><span>2.72x</span><span>2.51x</span><span>2.22x</span><span class="gold">52.1x</span><span class="gold">15.6x</span></div><button class="demo-launch" id="demoLaunch">Start Demo</button></section><section class="demo-panel"><div class="panel-title">Demo amount · <b id="chosen">0.5 Demo</b></div><div class="amounts"><button data-a="0.1">0.1 TON</button><button data-a="0.5" class="selected">0.5 TON</button><button data-a="1">1 TON</button><button data-a="2">2 TON</button></div><p>Demo balance only — selecting an amount reduces the local demo balance. No real TON is used.</p></section><section class="players"><div class="player"><div class="avatar2">🧑</div><div><b>MEHDY</b><small>◆ 0.10 ×10.28</small></div><strong>◆ 1.03</strong></div><div class="player"><div class="avatar2">🐺</div><div><b>Reza</b><small>◆ 0.70 ×9.11</small></div><strong>◆ 6.29</strong></div><div class="player"><div class="avatar2">🐱</div><div><b>xxxx</b><small>◆ 0.10 ×5.43</small></div><strong>◆ 0.54</strong></div><div class="player"><div class="avatar2">🧑‍🎤</div><div><b>Дима</b><small>◆ 0.50 ×5.02</small></div><strong>◆ 2.63</strong></div></section><nav><div>🎒<small>Backpack</small></div><div>♣<small>Invite</small></div><div class="active">⌂<small>Home</small></div><div>♛<small>Leaderboard</small></div><div>⇄<small>Earn</small></div></nav><script src="rocket.js"></script></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101218"><title>Rocket | Epic Gift</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="rocket-page">
+<header class="topbar">
+<button class="round-btn" onclick="history.back()">←</button>
+<div class="brand"><span class="brand-icon">✦</span><span>Epic Gift</span></div>
+<button class="round-btn">⋮</button>
+</header>
+<main class="rocket-main">
+<section class="rocket-game">
+<div class="stars">✦　 ·　 ✧　　 ·　　 ✦　 ·</div>
+<div class="trajectory"></div>
+<div class="rocket-score" id="multiplier">1.00x</div>
+<div class="rocket-status" id="gameStatus">آماده شروع</div>
+<div class="history" id="history"><span class="gold">6.30x</span><span>2.72x</span><span>2.51x</span><span>2.22x</span><span class="gold">5.21x</span></div>
+<button class="start-game" id="demoLaunch">شروع بازی</button>
+</section>
+<section class="points-panel">
+<div class="panel-header"><div><span>امتیاز بازی</span><strong id="chosen">50 امتیاز</strong></div><div class="current-points"><small>موجودی</small><b id="currentBalance">12,057</b></div></div>
+<div class="amounts"><button data-a="10">10</button><button data-a="50" class="selected">50</button><button data-a="100">100</button><button data-a="200">200</button></div>
+<p>این امتیازها فقط داخل سایت هستند و ارزش مالی ندارند.</p>
+</section>
+<section class="game-players">
+<div class="section-heading"><div><span class="live-dot"></span><strong>بازیکنان</strong></div><span>Live</span></div>
+<div class="game-player"><div class="player-avatar">🧑</div><div class="player-info"><strong>MEHDY</strong><small>در حال بازی</small></div><span class="player-state">ONLINE</span></div>
+<div class="game-player"><div class="player-avatar">🐺</div><div class="player-info"><strong>Reza</strong><small>در حال بازی</small></div><span class="player-state">ONLINE</span></div>
+<div class="game-player"><div class="player-avatar">🐱</div><div class="player-info"><strong>NIMA</strong><small>آماده</small></div><span class="player-state">ONLINE</span></div>
+</section>
+</main>
+<nav class="bottom-nav">
+<button><span>🎒</span><small>کوله</small></button><button><span>♣</span><small>دعوت</small></button>
+<button class="active" onclick="location.href='index.html'"><span>⌂</span><small>خانه</small></button><button><span>♛</span><small>رتبه‌ها</small></button><button><span>⇄</span><small>بازی</small></button>
+</nav>
+<script src="rocket.js"></script>
+</body>
+</html>
