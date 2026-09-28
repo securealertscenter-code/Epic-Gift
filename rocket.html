@@ -1,41 +1,6 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101218"><title>Rocket | Epic Gift</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body class="rocket-page">
-<header class="topbar">
-<button class="round-btn" onclick="history.back()">←</button>
-<div class="brand"><span class="brand-icon">✦</span><span>Epic Gift</span></div>
-<button class="round-btn">⋮</button>
-</header>
-<main class="rocket-main">
-<section class="rocket-game">
-<div class="stars">✦　 ·　 ✧　　 ·　　 ✦　 ·</div>
-<div class="trajectory"></div>
-<div class="rocket-score" id="multiplier">1.00x</div>
-<div class="rocket-status" id="gameStatus">آماده شروع</div>
-<div class="history" id="history"><span class="gold">6.30x</span><span>2.72x</span><span>2.51x</span><span>2.22x</span><span class="gold">5.21x</span></div>
-<button class="start-game" id="demoLaunch">شروع بازی</button>
-</section>
-<section class="points-panel">
-<div class="panel-header"><div><span>امتیاز بازی</span><strong id="chosen">50 امتیاز</strong></div><div class="current-points"><small>موجودی</small><b id="currentBalance">12,057</b></div></div>
-<div class="amounts"><button data-a="10">10</button><button data-a="50" class="selected">50</button><button data-a="100">100</button><button data-a="200">200</button></div>
-<p>این امتیازها فقط داخل سایت هستند و ارزش مالی ندارند.</p>
-</section>
-<section class="game-players">
-<div class="section-heading"><div><span class="live-dot"></span><strong>بازیکنان</strong></div><span>Live</span></div>
-<div class="game-player"><div class="player-avatar">🧑</div><div class="player-info"><strong>MEHDY</strong><small>در حال بازی</small></div><span class="player-state">ONLINE</span></div>
-<div class="game-player"><div class="player-avatar">🐺</div><div class="player-info"><strong>Reza</strong><small>در حال بازی</small></div><span class="player-state">ONLINE</span></div>
-<div class="game-player"><div class="player-avatar">🐱</div><div class="player-info"><strong>NIMA</strong><small>آماده</small></div><span class="player-state">ONLINE</span></div>
-</section>
-</main>
-<nav class="bottom-nav">
-<button><span>🎒</span><small>کوله</small></button><button><span>♣</span><small>دعوت</small></button>
-<button class="active" onclick="location.href='index.html'"><span>⌂</span><small>خانه</small></button><button><span>♛</span><small>رتبه‌ها</small></button><button><span>⇄</span><small>بازی</small></button>
-</nav>
-<script src="rocket.js"></script>
-</body>
-</html>
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101116"><title>Rocket | Epic Gift</title><link rel="stylesheet" href="style.css"></head>
+<body class="rocket-page"><header class="topbar"><button class="top-icon" onclick="history.back()">←</button><div class="brand"><b>Epic Gift</b><span class="brand-mark">✦</span></div><button class="top-icon">⋮</button></header>
+<main class="page">
+<section class="rocket-screen"><div class="rocket-stars">✦　·　✧　　·　✦　·</div><div class="curve"></div><div id="multiplier" class="big-mult">1.00x</div><div id="status" class="rocket-status2">آماده شروع</div><div id="history" class="history2"><span>6.30x</span><span>2.72x</span><span>2.51x</span><span>2.22x</span></div><button id="start" class="start-btn">شروع بازی</button></section>
+<section class="points-box"><div><small>امتیاز بازی</small><strong id="chosen">50 امتیاز</strong></div><div><small>موجودی</small><b id="balance">12,057</b></div><div class="amounts"><button data-a="10">10</button><button class="selected" data-a="50">50</button><button data-a="100">100</button><button data-a="200">200</button></div><p>این بازی فقط با امتیاز داخلی سایت کار می‌کند و ارزش مالی ندارد.</p></section>
+</main><nav class="bottom-nav"><button><span>◇</span><small>کوله</small></button><button><span>♧</span><small>دعوت</small></button><button class="active" onclick="location.href='index.html'"><span>⌂</span><small>خانه</small></button><button><span>♜</span><small>رتبه‌ها</small></button><button><span>⇄</span><small>بازی</small></button></nav><script src="rocket.js"></script></body></html>
