@@ -1,0 +1,2 @@
+const r=require('express').Router(),db=require('../services.db');
+r.get('/',async(q,s)=>{try{s.json((await db.query('SELECT * FROM collections ORDER BY id DESC')).rows)}catch(e){s.status(500).json({error:'database'})}});module.exports=r;

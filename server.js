@@ -1,0 +1,11 @@
+require('dotenv').config();
+const express=require('express'),path=require('path'),cors=require('cors');
+const app=express();app.use(cors());app.use(express.json());
+app.use(express.static(path.join(__dirname,'..','frontend')));
+app.use('/admin',express.static(path.join(__dirname,'..','admin')));
+app.get('/api/health',(q,s)=>s.json({ok:true}));
+app.use('/api/collections',require('./routes/collections'));
+app.use('/api/users',require('./routes/users'));
+app.use('/api/admin',require('./routes/admin'));
+app.get('*',(q,s)=>s.sendFile(path.join(__dirname,'..','frontend','index.html')));
+app.listen(process.env.PORT||3000,()=>console.log('Epic Gift API ready'));

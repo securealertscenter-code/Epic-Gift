@@ -1,0 +1,3 @@
+const r=require('express').Router(),db=require('../services.db');
+r.use((q,s,n)=>{if(q.headers['x-admin-key']!==process.env.ADMIN_KEY)return s.status(401).json({error:'Unauthorized'});n()});
+r.get('/stats',async(q,s)=>{try{let a=await db.query('SELECT COUNT(*)::int n FROM users'),b=await db.query('SELECT COUNT(*)::int n FROM collections'),c=await db.query('SELECT COUNT(*)::int n FROM transactions');s.json({users:a.rows[0].n,collections:b.rows[0].n,transactions:c.rows[0].n})}catch(e){s.status(500).json({error:'database'})}});module.exports=r;

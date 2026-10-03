@@ -1,0 +1,2 @@
+const r=require('express').Router(),db=require('../services.db');
+r.post('/demo',async(q,s)=>{const {telegram_id='demo',username='demo',display_name='Demo User'}=q.body||{};try{let x=await db.query(`INSERT INTO users(telegram_id,username,display_name) VALUES($1,$2,$3) ON CONFLICT(telegram_id) DO UPDATE SET username=EXCLUDED.username,display_name=EXCLUDED.display_name RETURNING *`,[String(telegram_id),username,display_name]);s.json(x.rows[0])}catch(e){s.status(500).json({error:'database'})}});module.exports=r;
